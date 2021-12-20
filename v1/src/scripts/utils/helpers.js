@@ -10,11 +10,11 @@ const passwordToHash = (password) => {
 };
 
 const generateAccessToken = (user) => {
-  return JWT.sign(user.toString(), process.env.ACCESS_TOKEN_SECRET_KEY);
+  return JWT.sign({...user}, process.env.ACCESS_TOKEN_SECRET_KEY);
 };
 
 const generateRefleshToken = (user) => {
-  return JWT.sign(user.toString(), process.env.REFLESH_TOKEN_SECRET_KEY);
+  return JWT.sign({...user}, process.env.REFLESH_TOKEN_SECRET_KEY);
 };
 
 module.exports = { passwordToHash, generateAccessToken, generateRefleshToken }; 

@@ -1,15 +1,15 @@
-const Project = require('../models/Project');
-
-const list = () => {
-    return Project.find()
+const ProjectModel = require("../models/Project");
+const BaseServise = require("./BaseService");
+class Project extends BaseServise {
+  constructor() {
+    super(ProjectModel);
+  }
+  list(query) {
+    return ProjectModel.find(query || {}).populate({
+      path: "owner",
+      select: "full_name email",
+    });
+  }
 }
 
-const insert = (data) => {
-    const project = new Project(data);
-    return project.save();
-}
-
-module.exports={
-    list,
-    insert
-}
+module.exports = Project;

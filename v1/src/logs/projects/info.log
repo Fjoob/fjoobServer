@@ -1,0 +1,6 @@
+{"level":"info","message":{"_id":"61bf5b31e3cf0185c39dd60a","createdAt":"2021-12-19T16:17:53.829Z","name":"example project name","updatedAt":"2021-12-19T16:17:53.829Z"},"service":"project-service"}
+{"level":"info","message":{"_id":"61bf5b5f5119fa85c0e36c1d","createdAt":"2021-12-19T16:18:39.839Z","name":"example project name","updatedAt":"2021-12-19T16:18:39.839Z"},"service":"project-service"}
+{"level":"info","message":{"_id":"61bfb4c24955f9d34a9bdd4e","createdAt":"2021-12-19T22:40:02.156Z","name":"example project name","updatedAt":"2021-12-19T22:40:02.156Z","user_id":"61bfb3db2d309902c57b164d"},"service":"project-service"}
+{"level":"info","message":{"_id":"61bfb7a0ffa5d88b9a0be2d9","createdAt":"2021-12-19T22:52:16.355Z","name":"example project name","owner":"61bfb3db2d309902c57b164d","updatedAt":"2021-12-19T22:52:16.355Z"},"service":"project-service"}
+{"level":"info","message":{"_id":"61c0ca1c05718afd8cbb4531","createdAt":"2021-12-20T18:23:24.958Z","name":"example project name33","owner":"61bfb3db2d309902c57b164d","updatedAt":"2021-12-20T18:23:24.958Z"},"service":"project-service"}
+{"level":"info","message":{"_id":"61c0ee833112b6e655a7b5f5","createdAt":"2021-12-20T20:58:43.314Z","name":"cretaed project","owner":"61bfb3db2d309902c57b164d","updatedAt":"2021-12-20T20:58:43.314Z"},"service":"project-service"}

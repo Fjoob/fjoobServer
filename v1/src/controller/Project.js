@@ -1,20 +1,32 @@
-const { insert, list } = require("../services/Project");
+const ProjectService = require("../services/Project");
 const httpStatus = require("http-status");
 
+const projectService = new ProjectService();
+
 const index = (req, res) => {
-  console.log(req.user);
-  list()
+  projectService
+    .list()
     .then((result) => res.status(httpStatus.OK).send(result))
     .catch((err) => res.status(httpStatus.INTERNAL_SERVER_ERROR).send(err));
 };
 
 const create = (req, res) => {
-  insert(req.body)
+  req.body.owner = req.user?._id;
+  projectService
+    .insert(req.body)
     .then((result) => res.status(httpStatus.CREATED).send(result))
+    .catch((err) => res.status(httpStatus.INTERNAL_SERVER_ERROR).send(err));
+};
+
+const update = (req, res) => {
+  projectService
+    .modify({ _id: req.params?.id }, { name: req.body?.name })
+    .then((result) => res.status(httpStatus.OK).send(result))
     .catch((err) => res.status(httpStatus.INTERNAL_SERVER_ERROR).send(err));
 };
 
 module.exports = {
   create,
-  index
+  index,
+  update,
 };

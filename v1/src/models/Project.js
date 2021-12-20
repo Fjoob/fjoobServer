@@ -3,7 +3,15 @@ const logger = require("../scripts/logger/Projects.js");
 
 const ProjectSchema = new Mongoose.Schema(
   {
-    name: String,
+    name: {
+      type: String,
+      required: true,
+    },
+    owner: {
+      type: Mongoose.Types.ObjectId,
+      ref: "user",
+      required: true,
+    },
   },
   { timestamps: true, versionKey: false }
 );
